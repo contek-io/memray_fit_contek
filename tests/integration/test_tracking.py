@@ -10,20 +10,20 @@ import time
 from pathlib import Path
 
 import pytest
+from contek_mr import AllocatorType
+from contek_mr import FileFormat
+from contek_mr import FileReader
+from contek_mr import Tracker
+from contek_mr._memray import compute_statistics
+from contek_mr._test import MemoryAllocator
+from contek_mr._test import MmapAllocator
+from contek_mr._test import PrimeCaches
+from contek_mr._test import PymallocDomain
+from contek_mr._test import PymallocMemoryAllocator
+from contek_mr._test import _cython_allocate_in_two_places
+from contek_mr._test import allocate_cpp_vector
+from contek_mr._test import fill_cpp_vector
 
-from memray import AllocatorType
-from memray import FileFormat
-from memray import FileReader
-from memray import Tracker
-from memray._memray import compute_statistics
-from memray._test import MemoryAllocator
-from memray._test import MmapAllocator
-from memray._test import PrimeCaches
-from memray._test import PymallocDomain
-from memray._test import PymallocMemoryAllocator
-from memray._test import _cython_allocate_in_two_places
-from memray._test import allocate_cpp_vector
-from memray._test import fill_cpp_vector
 from tests.utils import filter_relevant_allocations
 from tests.utils import run_without_tracer
 

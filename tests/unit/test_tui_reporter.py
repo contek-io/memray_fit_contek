@@ -4,13 +4,13 @@ from unittest.mock import MagicMock
 from unittest.mock import patch
 
 import pytest
+from contek_mr import AllocatorType
+from contek_mr.reporters.tui import TUI
+from contek_mr.reporters.tui import Location
+from contek_mr.reporters.tui import MemoryGraph
+from contek_mr.reporters.tui import aggregate_allocations
 from rich import print as rprint
 
-from memray import AllocatorType
-from memray.reporters.tui import TUI
-from memray.reporters.tui import Location
-from memray.reporters.tui import MemoryGraph
-from memray.reporters.tui import aggregate_allocations
 from tests.utils import MockAllocationRecord
 
 

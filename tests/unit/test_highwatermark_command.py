@@ -6,9 +6,8 @@ from unittest.mock import call
 from unittest.mock import patch
 
 import pytest
-
-from memray._errors import MemrayCommandError
-from memray.commands.common import HighWatermarkCommand
+from contek_mr._errors import MemrayCommandError
+from contek_mr.commands.common import HighWatermarkCommand
 
 
 class TestFilenameValidation:

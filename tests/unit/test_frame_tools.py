@@ -1,8 +1,7 @@
 import pytest
-
-from memray.reporters.frame_tools import is_cpython_internal
-from memray.reporters.frame_tools import is_frame_from_import_system
-from memray.reporters.frame_tools import is_frame_interesting
+from contek_mr.reporters.frame_tools import is_cpython_internal
+from contek_mr.reporters.frame_tools import is_frame_from_import_system
+from contek_mr.reporters.frame_tools import is_frame_interesting
 
 
 class TestFrameFiltering:

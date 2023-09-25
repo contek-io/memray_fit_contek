@@ -8,11 +8,11 @@ import threading
 from pathlib import Path
 
 import pytest
+from contek_mr import AllocatorType
+from contek_mr import FileReader
+from contek_mr import Tracker
+from contek_mr._test import MemoryAllocator
 
-from memray import AllocatorType
-from memray import FileReader
-from memray import Tracker
-from memray._test import MemoryAllocator
 from tests.utils import filter_relevant_allocations
 
 HERE = Path(__file__).parent

@@ -1,7 +1,8 @@
 """Tests for our testing utilities."""
 
-from memray import AllocationRecord
-from memray import AllocatorType
+from contek_mr import AllocationRecord
+from contek_mr import AllocatorType
+
 from tests.utils import MockAllocationRecord
 from tests.utils import filter_relevant_allocations
 

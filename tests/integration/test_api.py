@@ -1,13 +1,13 @@
 """Tests for exercising the public API."""
 
 import pytest
+from contek_mr import FileDestination
+from contek_mr import FileFormat
+from contek_mr import FileReader
+from contek_mr import SocketDestination
+from contek_mr import Tracker
+from contek_mr._test import MemoryAllocator
 
-from memray import FileDestination
-from memray import FileFormat
-from memray import FileReader
-from memray import SocketDestination
-from memray import Tracker
-from memray._test import MemoryAllocator
 from tests.utils import filter_relevant_allocations
 
 

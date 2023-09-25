@@ -21,7 +21,7 @@ cmake-build-*/
 
 # Cython specific files
 src/memray/*.cpp
-src/memray/_memray_api.h
+src/contek_mr/_memray_api.h
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

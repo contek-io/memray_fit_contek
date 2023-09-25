@@ -9,7 +9,7 @@ import time
 import docutils
 from docutils import core
 import pyperf
-import memray
+import contek_mr
 import contextlib
 
 try:

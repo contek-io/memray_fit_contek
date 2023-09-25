@@ -2,15 +2,15 @@ import mmap
 import os
 import tempfile
 
-from memray import AllocatorType
-from memray import FileReader
+from contek_mr import AllocatorType
+from contek_mr import FileReader
 
 try:
-    from memray._test import MemoryAllocator
+    from contek_mr._test import MemoryAllocator
 except ImportError:
-    from memray import MemoryAllocator
+    from contek_mr import MemoryAllocator
 
-from memray import Tracker
+from contek_mr import Tracker
 
 from .benchmarking.cases import async_tree_base
 from .benchmarking.cases import fannkuch_base

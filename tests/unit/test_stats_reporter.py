@@ -7,13 +7,13 @@ from typing import Tuple
 from unittest.mock import patch
 
 import pytest
+from contek_mr import AllocatorType as AT
+from contek_mr._metadata import Metadata
+from contek_mr._stats import Stats
+from contek_mr.reporters.stats import StatsReporter
+from contek_mr.reporters.stats import draw_histogram
+from contek_mr.reporters.stats import get_histogram_databins
 
-from memray import AllocatorType as AT
-from memray._metadata import Metadata
-from memray._stats import Stats
-from memray.reporters.stats import StatsReporter
-from memray.reporters.stats import draw_histogram
-from memray.reporters.stats import get_histogram_databins
 from tests.utils import MockAllocationRecord
 
 

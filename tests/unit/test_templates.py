@@ -1,6 +1,5 @@
 import pytest
-
-from memray.reporters.templates import get_report_title
+from contek_mr.reporters.templates import get_report_title
 
 
 @pytest.mark.parametrize(

@@ -12,9 +12,9 @@ from typing import Set
 from typing import Tuple
 
 import pytest
+from contek_mr import AllocatorType
+from contek_mr import SocketReader
 
-from memray import AllocatorType
-from memray import SocketReader
 from tests.utils import filter_relevant_allocations
 
 TIMEOUT = 5

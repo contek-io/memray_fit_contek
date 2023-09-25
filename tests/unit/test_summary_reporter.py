@@ -1,7 +1,8 @@
 from io import StringIO
 
-from memray import AllocatorType
-from memray.reporters.summary import SummaryReporter
+from contek_mr import AllocatorType
+from contek_mr.reporters.summary import SummaryReporter
+
 from tests.utils import MockAllocationRecord
 
 

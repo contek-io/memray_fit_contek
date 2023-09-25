@@ -295,9 +295,9 @@ By default, the live command will present the main thread of the program. You ca
 In addition to tracking Python processes from a CLI using `memray run`, it is also possible to programmatically enable tracking within a running Python program.
 
 ```py
-import memray
+import contek_mr
 
-with memray.Tracker("output_file.bin"):
+with contek_mr.Tracker("output_file.bin"):
     print("Allocations will be tracked until the with block ends")
 ```
 

@@ -8,8 +8,7 @@ from typing import Optional
 from typing import Tuple
 
 import pytest
-
-from memray import AllocatorType
+from contek_mr import AllocatorType
 
 
 def filter_relevant_allocations(records, ranged=False):

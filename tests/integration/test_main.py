@@ -13,12 +13,11 @@ from pathlib import Path
 from unittest.mock import patch
 
 import pytest
-
-from memray import FileFormat
-from memray import Tracker
-from memray._test import MemoryAllocator
-from memray._test import set_thread_name
-from memray.commands import main
+from contek_mr import FileFormat
+from contek_mr import Tracker
+from contek_mr._test import MemoryAllocator
+from contek_mr._test import set_thread_name
+from contek_mr.commands import main
 
 TIMEOUT = 10
 

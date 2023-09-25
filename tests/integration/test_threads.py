@@ -1,11 +1,12 @@
 import threading
 from pathlib import Path
 
-from memray import AllocatorType
-from memray import FileReader
-from memray import Tracker
-from memray._test import MemoryAllocator
-from memray._test import set_thread_name
+from contek_mr import AllocatorType
+from contek_mr import FileReader
+from contek_mr import Tracker
+from contek_mr._test import MemoryAllocator
+from contek_mr._test import set_thread_name
+
 from tests.utils import filter_relevant_allocations
 from tests.utils import skip_if_macos
 

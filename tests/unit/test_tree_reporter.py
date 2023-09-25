@@ -1,11 +1,12 @@
 import sys
 from io import StringIO
 
-from memray import AllocatorType
-from memray.reporters.tree import MAX_STACKS
-from memray.reporters.tree import ROOT_NODE
-from memray.reporters.tree import Frame
-from memray.reporters.tree import TreeReporter
+from contek_mr import AllocatorType
+from contek_mr.reporters.tree import MAX_STACKS
+from contek_mr.reporters.tree import ROOT_NODE
+from contek_mr.reporters.tree import Frame
+from contek_mr.reporters.tree import TreeReporter
+
 from tests.utils import MockAllocationRecord
 
 

@@ -1,5 +1,6 @@
-from memray import AllocatorType
-from memray.reporters.table import TableReporter
+from contek_mr import AllocatorType
+from contek_mr.reporters.table import TableReporter
+
 from tests.utils import MockAllocationRecord
 
 

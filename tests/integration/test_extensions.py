@@ -5,11 +5,10 @@ from pathlib import Path
 from textwrap import dedent
 
 import pytest
-
-from memray import AllocatorType
-from memray import FileReader
-from memray import Tracker
-from memray._test import MemoryAllocator
+from contek_mr import AllocatorType
+from contek_mr import FileReader
+from contek_mr import Tracker
+from contek_mr._test import MemoryAllocator
 
 HERE = Path(__file__).parent
 TEST_MULTITHREADED_EXTENSION = HERE / "multithreaded_extension"

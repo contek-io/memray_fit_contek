@@ -4,13 +4,13 @@ from multiprocessing import Pool
 from pathlib import Path
 
 import pytest
+from contek_mr import AllocatorType
+from contek_mr import FileReader
+from contek_mr import Tracker
+from contek_mr._test import MemoryAllocator
+from contek_mr._test import PymallocDomain
+from contek_mr._test import PymallocMemoryAllocator
 
-from memray import AllocatorType
-from memray import FileReader
-from memray import Tracker
-from memray._test import MemoryAllocator
-from memray._test import PymallocDomain
-from memray._test import PymallocMemoryAllocator
 from tests.utils import filter_relevant_allocations
 from tests.utils import filter_relevant_pymalloc_allocations
 

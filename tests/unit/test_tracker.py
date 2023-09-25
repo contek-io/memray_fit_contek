@@ -1,8 +1,7 @@
 from pathlib import Path
 
 import pytest
-
-from memray import Tracker
+from contek_mr import Tracker
 
 
 def test_two_trackers_cannot_be_active_at_the_same_time(tmpdir):

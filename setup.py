@@ -27,7 +27,7 @@ LIBBACKTRACE_LIBDIR = LIBBACKTRACE_LOCATION / "install" / "lib"
 ASSETS_LOCATION = (
     pathlib.Path(__file__).parent
     / "src"
-    / "memray"
+    / "contek_mr"
     / "reporters"
     / "templates"
     / "assets"
@@ -211,23 +211,23 @@ BINARY_FORMATS = {"darwin": "macho", "linux": "elf"}
 BINARY_FORMAT = BINARY_FORMATS.get(sys.platform, "elf")
 
 MEMRAY_EXTENSION = Extension(
-    name="memray._memray",
+    name="contek_mr._memray",
     sources=[
-        "src/memray/_memray.pyx",
-        "src/memray/_memray/compat.cpp",
-        "src/memray/_memray/hooks.cpp",
-        "src/memray/_memray/tracking_api.cpp",
-        f"src/memray/_memray/{BINARY_FORMAT}_shenanigans.cpp",
-        "src/memray/_memray/logging.cpp",
-        "src/memray/_memray/python_helpers.cpp",
-        "src/memray/_memray/source.cpp",
-        "src/memray/_memray/sink.cpp",
-        "src/memray/_memray/records.cpp",
-        "src/memray/_memray/record_reader.cpp",
-        "src/memray/_memray/record_writer.cpp",
-        "src/memray/_memray/snapshot.cpp",
-        "src/memray/_memray/socket_reader_thread.cpp",
-        "src/memray/_memray/native_resolver.cpp",
+        "src/contek_mr/_memray.pyx",
+        "src/contek_mr/_memray/compat.cpp",
+        "src/contek_mr/_memray/hooks.cpp",
+        "src/contek_mr/_memray/tracking_api.cpp",
+        f"src/contek_mr/_memray/{BINARY_FORMAT}_shenanigans.cpp",
+        "src/contek_mr/_memray/logging.cpp",
+        "src/contek_mr/_memray/python_helpers.cpp",
+        "src/contek_mr/_memray/source.cpp",
+        "src/contek_mr/_memray/sink.cpp",
+        "src/contek_mr/_memray/records.cpp",
+        "src/contek_mr/_memray/record_reader.cpp",
+        "src/contek_mr/_memray/record_writer.cpp",
+        "src/contek_mr/_memray/snapshot.cpp",
+        "src/contek_mr/_memray/socket_reader_thread.cpp",
+        "src/contek_mr/_memray/native_resolver.cpp",
     ],
     libraries=[
         "lz4",
@@ -247,9 +247,9 @@ MEMRAY_EXTENSION.libraries.append("dl")
 
 
 MEMRAY_TEST_EXTENSION = Extension(
-    name="memray._test_utils",
+    name="contek_mr._test_utils",
     sources=[
-        "src/memray/_memray_test_utils.pyx",
+        "src/contek_mr/_memray_test_utils.pyx",
     ],
     language="c++",
     extra_compile_args=["-std=c++17", "-Wall", *EXTRA_COMPILE_ARGS],
@@ -259,9 +259,9 @@ MEMRAY_TEST_EXTENSION = Extension(
 )
 
 MEMRAY_INJECT_EXTENSION = Extension(
-    name="memray._inject",
+    name="contek_mr._inject",
     sources=[
-        "src/memray/_memray/inject.cpp",
+        "src/contek_mr/_memray/inject.cpp",
     ],
     language="c++",
     extra_compile_args=["-std=c++17", "-Wall", *EXTRA_COMPILE_ARGS],
@@ -276,7 +276,7 @@ if not (IS_LINUX or IS_MAC):
     raise RuntimeError(f"memray does not support this platform ({platform})")
 
 about = {}
-with open("src/memray/_version.py") as fp:
+with open("src/contek_mr/_version.py") as fp:
     exec(fp.read(), about)
 
 
@@ -284,7 +284,7 @@ HERE = pathlib.Path(__file__).parent.resolve()
 LONG_DESCRIPTION = (HERE / "README.md").read_text(encoding="utf-8")
 
 setup(
-    name="memray",
+    name="contek_mr",
     version=about["__version__"],
     python_requires=">=3.7.0",
     description="A memory profiler for Python applications",
@@ -309,7 +309,7 @@ setup(
     packages=find_packages(where="src"),
     ext_modules=cythonize(
         [MEMRAY_EXTENSION, MEMRAY_TEST_EXTENSION, MEMRAY_INJECT_EXTENSION],
-        include_path=["src/memray"],
+        include_path=["src/contek_mr"],
         compiler_directives=COMPILER_DIRECTIVES,
     ),
     include_package_data=True,
@@ -323,8 +323,8 @@ setup(
     },
     entry_points={
         "console_scripts": [
-            f"memray{version_info.major}.{version_info.minor}=memray.__main__:main",
-            "memray=memray.__main__:main",
+            f"contek_mr{version_info.major}.{version_info.minor}=contek_mr.__main__:main",
+            "contek_mr=contek_mr.__main__:main",
         ],
     },
     cmdclass={

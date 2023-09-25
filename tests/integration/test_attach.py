@@ -2,10 +2,10 @@ import subprocess
 import sys
 
 import pytest
+from contek_mr import AllocatorType
+from contek_mr import FileReader
+from contek_mr.commands.attach import debugger_available
 
-from memray import AllocatorType
-from memray import FileReader
-from memray.commands.attach import debugger_available
 from tests.utils import filter_relevant_allocations
 
 PROGRAM = """

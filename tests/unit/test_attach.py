@@ -1,8 +1,7 @@
 from unittest.mock import patch
 
 import pytest
-
-from memray.commands import main
+from contek_mr.commands import main
 
 
 @patch("memray.commands.attach.debugger_available")

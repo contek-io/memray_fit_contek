@@ -4,17 +4,16 @@ from pathlib import Path
 from unittest.mock import patch
 
 import pytest
-
-from memray import FileDestination
-from memray import SocketDestination
-from memray.commands import main
-from memray.commands.flamegraph import FlamegraphCommand
-from memray.commands.run import RunCommand
-from memray.commands.stats import StatsCommand
-from memray.commands.summary import SummaryCommand
-from memray.commands.table import TableCommand
-from memray.commands.transform import TransformCommand
-from memray.commands.tree import TreeCommand
+from contek_mr import FileDestination
+from contek_mr import SocketDestination
+from contek_mr.commands import main
+from contek_mr.commands.flamegraph import FlamegraphCommand
+from contek_mr.commands.run import RunCommand
+from contek_mr.commands.stats import StatsCommand
+from contek_mr.commands.summary import SummaryCommand
+from contek_mr.commands.table import TableCommand
+from contek_mr.commands.transform import TransformCommand
+from contek_mr.commands.tree import TreeCommand
 
 
 def test_no_args_passed(capsys):

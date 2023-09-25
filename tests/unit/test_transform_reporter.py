@@ -2,8 +2,9 @@ import csv
 import json
 from io import StringIO
 
-from memray import AllocatorType
-from memray.reporters.transform import TransformReporter
+from contek_mr import AllocatorType
+from contek_mr.reporters.transform import TransformReporter
+
 from tests.utils import MockAllocationRecord
 
 

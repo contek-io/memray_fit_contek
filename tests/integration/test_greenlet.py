@@ -4,9 +4,9 @@ import textwrap
 from pathlib import Path
 
 import pytest
+from contek_mr import AllocatorType
+from contek_mr import FileReader
 
-from memray import AllocatorType
-from memray import FileReader
 from tests.utils import filter_relevant_allocations
 
 pytestmark = pytest.mark.skipif(

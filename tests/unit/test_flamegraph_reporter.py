@@ -1,11 +1,12 @@
 import sys
 
-from memray import AllocatorType
-from memray import FileReader
-from memray import Tracker
-from memray._test import MemoryAllocator
-from memray.reporters.flamegraph import MAX_STACKS
-from memray.reporters.flamegraph import FlameGraphReporter
+from contek_mr import AllocatorType
+from contek_mr import FileReader
+from contek_mr import Tracker
+from contek_mr._test import MemoryAllocator
+from contek_mr.reporters.flamegraph import MAX_STACKS
+from contek_mr.reporters.flamegraph import FlameGraphReporter
+
 from tests.utils import MockAllocationRecord
 from tests.utils import filter_relevant_allocations
 
